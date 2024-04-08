@@ -7,7 +7,7 @@ This is a simple Eureka server application build with Spring Boot. It acts as s 
 The Eureka server allows microservices to register themselves and discover other services in the system. It provides a central repository of service metadata (such as host,port and health status) that clients can query to locate services dynamically.
 
 ## Requirements
-- JDK 17
+- Java 17 or higher
 - Maven 5.7.43
 
 ## Running the Application
