@@ -10,6 +10,12 @@ The Eureka server allows microservices to register themselves and discover other
 - Java 17 or higher
 - Maven 5.7.43
 
+## Dependencies
+
+The Eureka server application relies on Config Server.Make Sure before starting the Eureka server config server needs to be up and running.  
+Note : If you are not running the config server on port 8191 please configure below property in bootstrap properties file accordingly.
+ spring.cloud.config.uri= http://localhost:<Your config server port>
+
 ## Running the Application
 
 To run the Eureka server application locally, follow these steps:
@@ -25,17 +31,12 @@ To run the Eureka server application locally, follow these steps:
 5. Access the Eureka server dashboard in your web browser:
    http://localhost:8761/
 
-## Congiguration
+## Configuration
 
 The Eureka server application can be configured using properties in the cloud config server.
  https://github.com/vasanthekumar/cloud-country-service-config-store.git
  ~`server.port`: The port number on which the Eureaka server listens for incoming requests.
  ~`eureka.client.register-with-eureka`: Indicates whether the server should register itself with itself.
- ~`eureka.client.fetch-registry`: Inicates whether the server should fetch the registry information from itself.
+ ~`eureka.client.fetch-registry`: Indicates whether the server should fetch the registry information from itself.
  ~ Other Eureka-specific properties for configuring instance metadata etc.
 
-## Dependencies
-
-The Eureka server application relies on the following dependencies:
-~ Spring Boot: For building and running the application.
-~ Spring Cloud Eureka Server: For implementing the Eureka server functionality.
