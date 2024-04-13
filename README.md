@@ -8,7 +8,7 @@ The Eureka server allows microservices to register themselves and discover other
 
 ## Requirements
 - Java 17 or higher
-- Maven 5.7.43
+- Maven 3.9.4
 
 ## Dependencies
 
@@ -34,7 +34,7 @@ To run the Eureka server application locally, follow these steps:
 ## Configuration
 
 The Eureka server application can be configured using properties in the cloud config server.
- https://github.com/vasanthekumar/cloud-country-service-config-store.git
+ https://github.com/vasanthekumar/cloud-country-service-config-store/blob/main/discovery-service/discovery.properties
  ~`server.port`: The port number on which the Eureaka server listens for incoming requests.
  ~`eureka.client.register-with-eureka`: Indicates whether the server should register itself with itself.
  ~`eureka.client.fetch-registry`: Indicates whether the server should fetch the registry information from itself.
